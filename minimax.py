@@ -33,6 +33,7 @@ def Minimax(node, depth):
             if bestValue < v:
                 bestValue = v
                 bestMove = move
+                bestDepth = leafDepth
         return bestValue, bestMove, bestDepth
     else:
         bestValue = sys.maxsize
@@ -50,6 +51,7 @@ def Minimax(node, depth):
             if bestValue > v:
                 bestValue = v
                 bestMove = move
+                bestDepth = leafDepth
         return bestValue, bestMove, bestDepth
     
 def main():

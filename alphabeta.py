@@ -34,6 +34,7 @@ def AlphaBeta(node, depth, alpha, beta):
             if bestValue < v:
                 bestValue = v
                 bestMove = move
+                bestDepth = leafDepth
             alpha = max(alpha, bestValue)
             if beta <= alpha:
                 break #beta pruning
@@ -54,6 +55,7 @@ def AlphaBeta(node, depth, alpha, beta):
             if bestValue > v:
                 bestValue = v
                 bestMove = move
+                bestDepth = leafDepth
             beta = min(beta, bestValue)
             if beta <= alpha:
                 break #alpha pruning
